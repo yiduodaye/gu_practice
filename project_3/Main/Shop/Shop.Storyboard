@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="14F1808" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="V4i-zI-KGh">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="M6k-yq-KmN">
+            <objects>
+                <navigationController id="V4i-zI-KGh" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="6p5-Pg-58p">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="iCz-1V-bxu" kind="relationship" relationship="rootViewController" id="kep-xU-XbO"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lgB-dU-1cx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-336.5333333333333" y="241.40000000000001"/>
+        </scene>
+        <!--Shop View Controller-->
+        <scene sceneID="ZG7-ci-mOy">
+            <objects>
+                <viewController id="iCz-1V-bxu" customClass="ShopViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="LDS-h6-vh8"/>
+                        <viewControllerLayoutGuide type="bottom" id="AtR-1u-Y4q"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="7yG-Mj-y5O">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="Qg4-aI-qT4" customClass="ShopTableView">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Qg4-aI-qT4" firstAttribute="leading" secondItem="7yG-Mj-y5O" secondAttribute="leading" id="L30-SW-TCe"/>
+                            <constraint firstItem="Qg4-aI-qT4" firstAttribute="bottom" secondItem="AtR-1u-Y4q" secondAttribute="top" id="QVX-RI-uVA"/>
+                            <constraint firstAttribute="trailing" secondItem="Qg4-aI-qT4" secondAttribute="trailing" id="uLL-Qe-2rB"/>
+                            <constraint firstItem="Qg4-aI-qT4" firstAttribute="top" secondItem="7yG-Mj-y5O" secondAttribute="top" id="yCC-tC-FDA"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="oxL-lO-NtI"/>
+                    <connections>
+                        <outlet property="shopTableView" destination="Qg4-aI-qT4" id="6xq-dk-3ql"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cix-no-jB4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="95" y="247"/>
+        </scene>
+    </scenes>
+</document>
